@@ -17,7 +17,7 @@ public class TrampScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Vector2 velocity = -collision.relativeVelocity;
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.Reflect(velocity, new Vector2(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)));
+            collision.gameObject.GetComponent<Rigidbody2D>().linearVelocity = Vector2.Reflect(velocity, new Vector2(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)));
         }
     }
 }
