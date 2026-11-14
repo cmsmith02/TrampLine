@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class TrampScript : MonoBehaviour
 {
-    public Vector2 a;
-    public float b;
     private float angle;
-    private float bounceAngle;
 
     public void Start()
     {
