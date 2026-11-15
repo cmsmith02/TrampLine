@@ -121,6 +121,16 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""SlowTimeAbility"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae640354-a724-4922-a095-0f7e6a5e0f08"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -222,6 +232,39 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
                     ""action"": ""SpawnRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5f98588-2a05-44cc-932e-4cf8e88a1c55"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SlowTimeAbility"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""36a424bb-8c93-487d-8431-a13b6a355bac"",
+                    ""path"": ""<Joystick>/stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SlowTimeAbility"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5241c284-1503-4e54-b16f-c4fbbef13a9a"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SlowTimeAbility"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -233,6 +276,7 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
         m_Spawner_SpawnFlat = m_Spawner.FindAction("SpawnFlat", throwIfNotFound: true);
         m_Spawner_SpawnLeft = m_Spawner.FindAction("SpawnLeft", throwIfNotFound: true);
         m_Spawner_SpawnRight = m_Spawner.FindAction("SpawnRight", throwIfNotFound: true);
+        m_Spawner_SlowTimeAbility = m_Spawner.FindAction("SlowTimeAbility", throwIfNotFound: true);
     }
 
     ~@SpawnerControls()
@@ -316,6 +360,7 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Spawner_SpawnFlat;
     private readonly InputAction m_Spawner_SpawnLeft;
     private readonly InputAction m_Spawner_SpawnRight;
+    private readonly InputAction m_Spawner_SlowTimeAbility;
     /// <summary>
     /// Provides access to input actions defined in input action map "Spawner".
     /// </summary>
@@ -339,6 +384,10 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Spawner/SpawnRight".
         /// </summary>
         public InputAction @SpawnRight => m_Wrapper.m_Spawner_SpawnRight;
+        /// <summary>
+        /// Provides access to the underlying input action "Spawner/SlowTimeAbility".
+        /// </summary>
+        public InputAction @SlowTimeAbility => m_Wrapper.m_Spawner_SlowTimeAbility;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -374,6 +423,9 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
             @SpawnRight.started += instance.OnSpawnRight;
             @SpawnRight.performed += instance.OnSpawnRight;
             @SpawnRight.canceled += instance.OnSpawnRight;
+            @SlowTimeAbility.started += instance.OnSlowTimeAbility;
+            @SlowTimeAbility.performed += instance.OnSlowTimeAbility;
+            @SlowTimeAbility.canceled += instance.OnSlowTimeAbility;
         }
 
         /// <summary>
@@ -394,6 +446,9 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
             @SpawnRight.started -= instance.OnSpawnRight;
             @SpawnRight.performed -= instance.OnSpawnRight;
             @SpawnRight.canceled -= instance.OnSpawnRight;
+            @SlowTimeAbility.started -= instance.OnSlowTimeAbility;
+            @SlowTimeAbility.performed -= instance.OnSlowTimeAbility;
+            @SlowTimeAbility.canceled -= instance.OnSlowTimeAbility;
         }
 
         /// <summary>
@@ -455,5 +510,12 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSpawnRight(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SlowTimeAbility" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSlowTimeAbility(InputAction.CallbackContext context);
     }
 }

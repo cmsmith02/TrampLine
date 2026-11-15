@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
+
 
 public class Respawn : MonoBehaviour
 {
@@ -7,6 +10,7 @@ public class Respawn : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
