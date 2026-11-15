@@ -93,71 +93,135 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
             ""id"": ""bff579df-be97-4a6d-9e75-018f3dd9e2c7"",
             ""actions"": [
                 {
-                    ""name"": ""Spawn"",
-                    ""type"": ""Value"",
-                    ""id"": ""6ab9b845-0f2a-4851-908b-4af74efe1076"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""SpawnFlat"",
+                    ""type"": ""Button"",
+                    ""id"": ""1fc6c693-7dce-4f6e-a7c7-7758707b9b0f"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true,
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""SpawnLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""b978e166-d08b-4a18-830c-e44e01278480"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""SpawnRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""a5684fe1-d26a-4871-8ff2-163eef098c80"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
                     ""priority"": 0
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""ad07cd11-6e87-4eb4-af86-5b7531eea81a"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Spawn"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""17ce1d64-69ed-44d4-a71a-dae98d928c40"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Spawn"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""8993369a-43af-4a20-98e2-cd8ab24e9d4c"",
+                    ""name"": """",
+                    ""id"": ""f505275c-60df-4a12-9b4d-06402944268f"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Spawn"",
+                    ""action"": ""SpawnFlat"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""left"",
-                    ""id"": ""31dd7ee7-b965-4ae3-bfbe-e4c4b6c4e726"",
+                    ""name"": """",
+                    ""id"": ""b83e3dba-7002-4e50-9a8b-00d919983713"",
+                    ""path"": ""<Joystick>/stick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpawnFlat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8ea78a3-0ca7-40f0-9bde-bf09ace99d5e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpawnFlat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc3d2d95-6fdb-4178-886e-8ad3752ab606"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Spawn"",
+                    ""action"": ""SpawnLeft"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""right"",
-                    ""id"": ""0c9ac111-3b22-46cc-8959-eccc1f7783a4"",
+                    ""name"": """",
+                    ""id"": ""6735a93e-417c-4bba-8a07-8750e96c76ae"",
+                    ""path"": ""<Joystick>/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpawnLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ded2c26-3318-477d-aaae-ffbef534d0b3"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpawnLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4050a2dd-3925-452e-a290-9d75c766344a"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Spawn"",
+                    ""action"": ""SpawnRight"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf69136e-c235-4a95-b6a0-14d18e896496"",
+                    ""path"": ""<Joystick>/stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpawnRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e4cf9375-3f84-4ed3-b039-9eb9fad875a8"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpawnRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -166,7 +230,9 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
 }");
         // Spawner
         m_Spawner = asset.FindActionMap("Spawner", throwIfNotFound: true);
-        m_Spawner_Spawn = m_Spawner.FindAction("Spawn", throwIfNotFound: true);
+        m_Spawner_SpawnFlat = m_Spawner.FindAction("SpawnFlat", throwIfNotFound: true);
+        m_Spawner_SpawnLeft = m_Spawner.FindAction("SpawnLeft", throwIfNotFound: true);
+        m_Spawner_SpawnRight = m_Spawner.FindAction("SpawnRight", throwIfNotFound: true);
     }
 
     ~@SpawnerControls()
@@ -247,7 +313,9 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
     // Spawner
     private readonly InputActionMap m_Spawner;
     private List<ISpawnerActions> m_SpawnerActionsCallbackInterfaces = new List<ISpawnerActions>();
-    private readonly InputAction m_Spawner_Spawn;
+    private readonly InputAction m_Spawner_SpawnFlat;
+    private readonly InputAction m_Spawner_SpawnLeft;
+    private readonly InputAction m_Spawner_SpawnRight;
     /// <summary>
     /// Provides access to input actions defined in input action map "Spawner".
     /// </summary>
@@ -260,9 +328,17 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
         /// </summary>
         public SpawnerActions(@SpawnerControls wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Spawner/Spawn".
+        /// Provides access to the underlying input action "Spawner/SpawnFlat".
         /// </summary>
-        public InputAction @Spawn => m_Wrapper.m_Spawner_Spawn;
+        public InputAction @SpawnFlat => m_Wrapper.m_Spawner_SpawnFlat;
+        /// <summary>
+        /// Provides access to the underlying input action "Spawner/SpawnLeft".
+        /// </summary>
+        public InputAction @SpawnLeft => m_Wrapper.m_Spawner_SpawnLeft;
+        /// <summary>
+        /// Provides access to the underlying input action "Spawner/SpawnRight".
+        /// </summary>
+        public InputAction @SpawnRight => m_Wrapper.m_Spawner_SpawnRight;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -289,9 +365,15 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_SpawnerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_SpawnerActionsCallbackInterfaces.Add(instance);
-            @Spawn.started += instance.OnSpawn;
-            @Spawn.performed += instance.OnSpawn;
-            @Spawn.canceled += instance.OnSpawn;
+            @SpawnFlat.started += instance.OnSpawnFlat;
+            @SpawnFlat.performed += instance.OnSpawnFlat;
+            @SpawnFlat.canceled += instance.OnSpawnFlat;
+            @SpawnLeft.started += instance.OnSpawnLeft;
+            @SpawnLeft.performed += instance.OnSpawnLeft;
+            @SpawnLeft.canceled += instance.OnSpawnLeft;
+            @SpawnRight.started += instance.OnSpawnRight;
+            @SpawnRight.performed += instance.OnSpawnRight;
+            @SpawnRight.canceled += instance.OnSpawnRight;
         }
 
         /// <summary>
@@ -303,9 +385,15 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="SpawnerActions" />
         private void UnregisterCallbacks(ISpawnerActions instance)
         {
-            @Spawn.started -= instance.OnSpawn;
-            @Spawn.performed -= instance.OnSpawn;
-            @Spawn.canceled -= instance.OnSpawn;
+            @SpawnFlat.started -= instance.OnSpawnFlat;
+            @SpawnFlat.performed -= instance.OnSpawnFlat;
+            @SpawnFlat.canceled -= instance.OnSpawnFlat;
+            @SpawnLeft.started -= instance.OnSpawnLeft;
+            @SpawnLeft.performed -= instance.OnSpawnLeft;
+            @SpawnLeft.canceled -= instance.OnSpawnLeft;
+            @SpawnRight.started -= instance.OnSpawnRight;
+            @SpawnRight.performed -= instance.OnSpawnRight;
+            @SpawnRight.canceled -= instance.OnSpawnRight;
         }
 
         /// <summary>
@@ -347,11 +435,25 @@ public partial class @SpawnerControls: IInputActionCollection2, IDisposable
     public interface ISpawnerActions
     {
         /// <summary>
-        /// Method invoked when associated input action "Spawn" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "SpawnFlat" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnSpawn(InputAction.CallbackContext context);
+        void OnSpawnFlat(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SpawnLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSpawnLeft(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SpawnRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSpawnRight(InputAction.CallbackContext context);
     }
 }
