@@ -9,5 +9,5 @@ This fun game is about a green blob named Christopher. He loves his trampolines 
 **BY CALVIN, SIMON, AND CAROLINE**
 
 **FOR THE HAVEN HACK CLUB IN DENVER**
-##Our itch.io link!
+## Our itch.io link!
 [itch.io](sevenatenine.itch.io/trampoline)
